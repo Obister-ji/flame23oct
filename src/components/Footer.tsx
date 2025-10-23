@@ -1,4 +1,4 @@
-import { Heart, Linkedin, Twitter, Github, Mail } from 'lucide-react';
+import { Heart, Linkedin, Twitter, Mail } from 'lucide-react';
 import flameLogo from '@/assets/flame-logo-new.png';
 
 const Footer = () => {
@@ -28,26 +28,19 @@ const Footer = () => {
               Transform your workflows with the power of AI automation.
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="https://linkedin.com/company/flame-ai" 
+              <a
+                href="https://www.linkedin.com/in/flame-ai-256320389"
                 className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors duration-200"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a 
-                href="https://twitter.com/flame_ai" 
+              <a
+                href="https://x.com/FlameAIdotin"
                 className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors duration-200"
                 aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://github.com/flame-ai" 
-                className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors duration-200"
-                aria-label="GitHub"
-              >
-                <Github className="w-5 h-5" />
               </a>
               <a
                 href="mailto:flameai.in@gmail.com"

@@ -12,6 +12,7 @@ import EmailWriter from "./pages/EmailWriter";
 import PromptWriter from "./pages/PromptWriter";
 import TaskForce from "./pages/TaskForce";
 import MediaMama from "./pages/MediaMama";
+import XPostWriter from "./pages/XPostWriter";
 import MCPPlayground from "./components/MCPPlayground";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
@@ -39,6 +40,7 @@ const App = () => (
             <Route path="/prompt-writer" element={<PromptWriter />} />
             <Route path="/task-force" element={<TaskForce />} />
             <Route path="/media-mama" element={<MediaMama />} />
+            <Route path="/xpost-writer" element={<XPostWriter />} />
             <Route path="/mcp-playground" element={<MCPPlayground />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

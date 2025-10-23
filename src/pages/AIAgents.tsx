@@ -12,6 +12,7 @@ import pixwiz2 from '@/assets/pixwiz2.png';
 import emailwriter from '@/assets/emailwriter.png';
 import promptwriter from '@/assets/promptwriter.png';
 import Taskmanagement from '@/assets/Taskmanagement.png';
+import xpostwriter from '@/assets/xpostwriter-2.png';
 
 const AIAgents = () => {
   const [searchParams] = useSearchParams();
@@ -78,7 +79,7 @@ const AIAgents = () => {
     },
     {
       id: 6,
-      name: 'Task-Force',
+      name: 'TASK-FORCE',
       toolType: 'TOOL TYPE: TASK MANAGEMENT TOOL',
       rating: 4.9,
       maxRating: 5,
@@ -86,6 +87,17 @@ const AIAgents = () => {
       tier: 'premium',
       description: 'Intelligent task management and workflow automation system for enhanced productivity',
       image: Taskmanagement
+    },
+    {
+      id: 7,
+      name: 'X POST WRITER',
+      toolType: 'TOOL TYPE: CROSS-PLATFORM PUBLISHER',
+      rating: 4.9,
+      maxRating: 5,
+      category: 'UTILITY' as const,
+      tier: 'premium',
+      description: 'AI-powered social media content generator for Twitter/X and cross-platform publishing',
+      image: xpostwriter
     }
   ];
 
@@ -169,7 +181,7 @@ const AIAgents = () => {
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 text-accent font-medium text-sm mb-6 backdrop-blur-sm">
               <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
-              6+ AI-Powered Agents
+              7+ AI-Powered Agents
             </div>
 
             {/* Main Headline */}
@@ -281,10 +293,12 @@ const AIAgents = () => {
                       navigate('/email-writer');
                     } else if (agent.name === 'IDEA-WEAVER') {
                       navigate('/prompt-writer');
-                    } else if (agent.name === 'Task-Force') {
+                    } else if (agent.name === 'TASK-FORCE') {
                       navigate('/task-force');
                     } else if (agent.name === 'MEDIA-MAMA') {
                       navigate('/media-mama');
+                    } else if (agent.name === 'X POST WRITER') {
+                      navigate('/xpost-writer');
                     }
                   }}
                 />

@@ -197,7 +197,7 @@ const TaskForce = () => {
               <div className="flex-1">
                 <img 
                   src={Taskmanagement} 
-                  alt="Task-Force Agent" 
+                  alt="TASK-FORCE Agent" 
                   className="w-full h-auto rounded-2xl shadow-2xl"
                 />
               </div>
