@@ -1,22 +1,16 @@
-# Welcome to your Lovable project
+# Flame AI
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/cfe86caa-53bb-4b33-9e00-68aa5937a109
+Flame AI - Your intelligent assistant for various tasks including email writing, prompt generation, and more.
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/cfe86caa-53bb-4b33-9e00-68aa5937a109) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,12 +56,15 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/cfe86caa-53bb-4b33-9e00-68aa5937a109) and click on Share -> Publish.
+To deploy this project, you can use any hosting service that supports Node.js applications. Some popular options include:
 
-## Can I connect a custom domain to my Lovable project?
+- Vercel
+- Netlify
+- Heroku
+- DigitalOcean App Platform
 
-Yes, you can!
+Build the project using `npm run build` and deploy the dist folder to your preferred hosting service.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Can I connect a custom domain to this project?
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Yes, you can! Most hosting providers allow you to connect custom domains to your deployed applications. Please refer to your hosting provider's documentation for specific instructions on setting up custom domains.
