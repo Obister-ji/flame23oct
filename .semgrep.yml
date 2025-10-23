@@ -1,0 +1,37 @@
+# Semgrep configuration for FlameAI project security scanning
+rules:
+  - id: hardcoded-api-keys
+    message: Hardcoded API key detected
+    languages: [js, ts]
+    severity: ERROR
+    pattern: |
+      $KEY = "...";
+      ...
+      $API_KEY = $KEY
+    metadata:
+      category: security
+      technology:
+        - nodejs
+        - express
+
+  - id: insecure-crypto-usage
+    message: Insecure cryptographic usage detected
+    languages: [js, ts]
+    severity: WARNING
+    pattern: |
+      crypto.createHash('md5')
+    metadata:
+      category: security
+      technology:
+        - nodejs
+
+  - id: missing-rate-limit
+    message: API endpoint without rate limiting
+    languages: [js]
+    severity: INFO
+    pattern: |
+      app.$METHOD('$PATH', ...)
+    metadata:
+      category: security
+      technology:
+        - express

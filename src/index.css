@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Flame AI Design System - Where innovation meets elegance
+All colors are HSL for maximum flexibility and theming capabilities.
+Color palette: Deep Forest Green, Soft Sage, Warm Coral, Cream, Charcoal
+*/
+
+@layer base {
+  :root {
+    /* Flame AI Brand Colors */
+    --forest-green: 140 30% 25%;        /* Deep Forest Green #2C5530 */
+    --sage-green: 140 30% 75%;          /* Soft Sage #B8D4C2 */
+    --warm-coral: 8 65% 65%;            /* Warm Coral #E8756B */
+    --cream: 45 20% 95%;                /* Cream #F5F2EA */
+    --charcoal: 0 0% 20%;               /* Charcoal #333333 */
+    
+    /* Semantic Color System */
+    --background: 45 20% 95%;           /* Cream background */
+    --foreground: 0 0% 20%;             /* Charcoal text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+
+    --primary: 140 30% 25%;             /* Forest Green */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 140 30% 75%;           /* Sage Green */
+    --secondary-foreground: 140 30% 25%;
+
+    --muted: 140 15% 88%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 8 65% 65%;                /* Warm Coral */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 140 15% 85%;
+    --input: 140 15% 92%;
+    --ring: 140 30% 25%;
+
+    --radius: 0.75rem;
+    
+    /* Custom Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--forest-green)), hsl(var(--sage-green)));
+    --gradient-coral: linear-gradient(135deg, hsl(var(--warm-coral)), hsl(var(--accent) / 0.8));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--cream)), hsl(var(--sage-green) / 0.1));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--forest-green) / 0.1);
+    --shadow-coral: 0 8px 30px hsl(var(--warm-coral) / 0.2);
+    --shadow-elegant: 0 10px 40px hsl(var(--forest-green) / 0.15);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Typography Hierarchy */
+  .font-display {
+    font-family: 'Fraunces', serif;
+  }
+  
+  .font-ui {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  /* Hero Section Styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .coral-gradient {
+    background: var(--gradient-coral);
+  }
+  
+  .subtle-gradient {
+    background: var(--gradient-subtle);
+  }
+  
+  /* Custom Button Styles */
+  .btn-hero {
+    @apply bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg;
+    box-shadow: var(--shadow-coral);
+  }
+  
+  .btn-nav {
+    @apply bg-accent text-accent-foreground px-6 py-2 rounded-lg font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg;
+    box-shadow: var(--shadow-coral);
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
+    box-shadow: var(--shadow-soft);
+  }
+  
+  /* Path Selection Cards */
+  .path-card {
+    @apply bg-card rounded-2xl p-8 transition-all duration-300 hover:scale-[1.02] cursor-pointer;
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .path-card:hover {
+    box-shadow: var(--shadow-coral);
+  }
+  
+  /* Flame Animation */
+  .flame-pulse {
+    animation: flame-glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes flame-glow {
+    0% {
+      box-shadow: 0 0 20px hsl(var(--warm-coral) / 0.3);
+    }
+    100% {
+      box-shadow: 0 0 40px hsl(var(--warm-coral) / 0.6);
+    }
+  }
+  
+  /* Scroll Reveal Animation - Optimized */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    will-change: opacity, transform;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Floating Elements - Optimized */
+  .float {
+    animation: float 6s ease-in-out infinite;
+    will-change: transform;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* Character Card Animations - Optimized */
+  .character-card-hover {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
+  }
+  
+  .character-card-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px hsl(var(--accent) / 0.2);
+  }
+  
+  /* Staggered Animation for Grid - Optimized */
+  .stagger-animation {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    animation: staggerIn 0.4s ease-out forwards;
+    will-change: opacity, transform;
+  }
+  
+  @keyframes staggerIn {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  /* Particle Effect - Simplified */
+  .particle-float {
+    animation: particleFloat 8s ease-in-out infinite;
+    will-change: transform;
+  }
+  
+  @keyframes particleFloat {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+}

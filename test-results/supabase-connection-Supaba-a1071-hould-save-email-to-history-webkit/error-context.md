@@ -1,0 +1,92 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - img "Flame AI Logo" [ref=e8]
+          - generic [ref=e9]: Flame AI
+        - generic [ref=e10]:
+          - link "Home" [ref=e11]:
+            - /url: /
+          - link "About" [ref=e12]:
+            - /url: /about
+          - link "Agents" [ref=e13]:
+            - /url: /agents
+          - button "Login" [ref=e14] [cursor=pointer]
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - img [ref=e22]
+        - text: MAIL-MAGE EMAIL WRITER
+      - heading "Professional Email Writer" [level=1] [ref=e24]
+      - heading "AI-Powered Email Generation" [level=2] [ref=e25]
+      - paragraph [ref=e26]: Generate professional emails in seconds with our advanced AI technology. Choose your tone, purpose, and key points to create perfectly crafted emails every time.
+      - generic [ref=e28]:
+        - button "Generator" [ref=e29] [cursor=pointer]:
+          - img
+          - text: Generator
+        - button "History" [ref=e30] [cursor=pointer]:
+          - img
+          - text: History
+    - generic [ref=e34]:
+      - heading "Authentication Required" [level=3] [ref=e36]
+      - generic [ref=e37]:
+        - paragraph [ref=e38]: Please log in to save and view your email history
+        - paragraph [ref=e39]: Authentication is required for this feature
+    - contentinfo [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - generic [ref=e44]:
+              - img "Flame AI Logo" [ref=e45]
+              - generic [ref=e46]: Flame AI
+            - paragraph [ref=e47]: Bridging everyday productivity tools with enterprise-grade business solutions. Transform your workflows with the power of AI automation.
+            - generic [ref=e48]:
+              - link "LinkedIn" [ref=e49]:
+                - /url: https://linkedin.com/company/flame-ai
+                - img [ref=e50]
+              - link "Twitter" [ref=e54]:
+                - /url: https://twitter.com/flame_ai
+                - img [ref=e55]
+              - link "GitHub" [ref=e57]:
+                - /url: https://github.com/flame-ai
+                - img [ref=e58]
+              - link "Email" [ref=e61]:
+                - /url: mailto:flameai.in@gmail.com
+                - img [ref=e62]
+          - generic [ref=e65]:
+            - heading "Solutions" [level=4] [ref=e66]
+            - list [ref=e67]:
+              - listitem [ref=e68]:
+                - button "Custom Automation" [ref=e69] [cursor=pointer]
+              - listitem [ref=e70]:
+                - button "Free Tools" [ref=e71] [cursor=pointer]
+          - generic [ref=e72]:
+            - heading "Company" [level=4] [ref=e73]
+            - list [ref=e74]:
+              - listitem [ref=e75]:
+                - link "About Us" [ref=e76]:
+                  - /url: "#about"
+              - listitem [ref=e77]:
+                - button "Contact" [ref=e78] [cursor=pointer]
+        - generic [ref=e80]:
+          - generic [ref=e81]: © 2024 Flame AI. All rights reserved.
+          - generic [ref=e82]:
+            - link "Privacy Policy" [ref=e83]:
+              - /url: /about#privacy
+            - link "Terms of Service" [ref=e84]:
+              - /url: /about#terms
+            - link "Cookie Policy" [ref=e85]:
+              - /url: /about#cookies
+          - generic [ref=e86]:
+            - text: Made with
+            - img [ref=e87]
+            - text: by Flame AI Team
+  - button "Open chat" [ref=e90] [cursor=pointer]:
+    - img [ref=e91]
+```

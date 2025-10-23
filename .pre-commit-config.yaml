@@ -1,0 +1,25 @@
+repos:
+  - repo: https://github.com/returntocorp/semgrep
+    rev: v1.139.0
+    hooks:
+      - id: semgrep
+        args: [--config=auto, --exclude=node_modules, --exclude=dist, --exclude=build, --exclude=.git, --error, --severity=ERROR]
+        name: Semgrep Security Scan (Critical)
+        
+  - repo: https://github.com/returntocorp/semgrep
+    rev: v1.139.0
+    hooks:
+      - id: semgrep
+        args: [--config=p/security-audit, --exclude=node_modules, --exclude=dist, --exclude=build, --exclude=.git, --severity=WARNING]
+        name: Semgrep Security Audit
+        verbose: true
+        
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+        args: ['--maxkb=1000']
+      - id: check-merge-conflict
